@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="this is the LCO project">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">    
+    <title>Lco project</title>
+</head>
+<body>
+    <div class="container">
+        <br>
+      <div class="box">
+          <div class="que alert badge-danger">
+           Q. Program to Check if a Given String is Palindrome
+          </div>
+          <div class="desc alert badge-warning">
+            Given a string, write a function to check if it is palindrome or not. 
+            A string is said to be palindrome if reverse of the string is same as string. For example, “abba” is palindrome, but “abbc” is not palindrome.
+          </div>
+          <div class="sol">
+              <span class="alert badge-danger" >solution in </span>
+              <br><br>
+              <button class="btn btn-info c-btn" onclick="switchopt1()">c</button><button style="margin-left:2px;" class="btn btn-info j-btn" onclick="switchopt2()">java</button>
+            
+             
+              <div class="in-c"> 
+                    <?prettify linenums=1?>
+              <pre class="prettyprint" id="c" style="margin-top: 1px;">
+    #include  &lt;stdio.h&gt;
+    #include  &lt;string.h&gt;
+        
+    // A function to check if a string str is palindrome
+    void isPalindrome(char str[])
+    {
+        // Start from leftmost and rightmost corners of str
+        int l = 0;
+                        int h = strlen(str) - 1;
+        
+        // Keep comparing characters while they are same
+        while (h > l)
+        {
+            if (str[l++] != str[h--])
+            {
+                printf("%s is Not Palindrome", str);
+                return;
+            }
+        }
+        printf("%s is palindrome", str);
+    }
+        
+    // Driver program to test above function
+    int main()
+    {
+        isPalindrome("abba");
+        isPalindrome("abbccbba");
+        isPalindrome("geeks");
+        return 0;
+    }
+
+            </pre>
+        </div>
+  <div class="in-java">
+        <?prettify linenums=1?>
+        <pre class="prettyprint">
+    // Java program to illustrate checking of a string
+    // if its palindrome or not using reverse function
+    class Palindrome
+    {
+        public static void checkPalindrome(String s)
+        {
+        // reverse the given String
+        String reverse = new StringBuffer(s).reverse().toString();
+        
+        // check whether the string is palindrome or not
+        if (s.equals(reverse))
+            System.out.println("Yes");
+        
+        else
+            System.out.println("No");
+        }
+        
+        public static void main (String[] args)
+                    throws java.lang.Exception
+        {
+        checkPalindrome("malayalam");
+        checkPalindrome("GeeksforGeeks");
+        }
+    }
+        </pre>
+
+  </div>
+          </div>
+      </div>
+   
+      <div class="box pos">
+            <div class="que alert badge-danger">
+             Q. Program to print first n Fibonacci Numbers.
+            </div>
+            <div class="desc alert badge-warning">
+                Following is simple program to print first n Fibonacci numbers.
+                example - <br>
+                Input : n = 3,
+                Output : 1 1 2
+                            <br>
+                Input : n = 7,
+                Output : 1 1 2 3 5 8 13
+            </div>
+            <div class="sol">
+                <span class="alert badge-danger" >solution in </span>
+                <br><br>
+                <button class="btn btn-info c-btn" onclick="switchopt1()">c</button><button style="margin-left:2px;" class="btn btn-info j-btn" onclick="switchopt2()">java</button>
+              
+               
+                <div class="in-c"> 
+                      <?prettify linenums=1?>
+         <pre class="prettyprint" style="margin-top: 1px;">
+     // C program to print first n Fibonacci numbers
+      #include  &lt;stdio.h&gt;
+     
+      
+
+       
+      // Function to print first n Fibonacci Numbers
+      void printFibonacciNumbers(int n)
+      {
+          int f1 = 0, f2 = 1, i;
+       
+          if (n < 1)
+              return;
+       
+          for (i = 1; i <= n; i++)
+          {
+              printf("%d ", f2);
+              int next = f1 + f2;
+              f1 = f2;
+              f2 = next;
+          }
+      }
+       
+      // Driver Code
+      int main()
+      {
+          printFibonacciNumbers(7);
+          return 0;
+      }
+        
+              </pre>
+          </div>
+
+             <div class="in-java">
+          <?prettify linenums=1?>
+          <pre class="prettyprint" style="position: absolute;top: 682px;">
+            //Fibonacci Series using Recursion
+            class fibonacci
+            {
+                static int fib(int n)
+                {
+                if (n <= 1)
+                   return n;
+                return fib(n-1) + fib(n-2);
+                }
+                  
+                public static void main (String args[])
+                {
+                int n = 9;
+                System.out.println(fib(n));
+                }
+            }
+          </pre>
+  
+        </div>
+        </div>
+        </div>
+
+         <div class="box pos2">
+            <div class="que alert badge-danger">
+             Q. Program for factorial of a number.
+            </div>
+            <div class="desc alert badge-warning">
+                Factorial of a non-negative integer, is multiplication of all integers smaller than or equal to <br>
+                 For example factorial of 6 is 6*5*4*3*2*1 which is 720.
+            </div>
+            <div class="sol">
+                <span class="alert badge-danger" >solution in </span>
+                <br><br>
+                <button class="btn btn-info c-btn" onclick="switchopt1()">c</button><button style="margin-left:2px;" class="btn btn-info j-btn" onclick="switchopt2()">java</button>
+              
+               
+                <div class="in-c"> 
+              <?prettify linenums=1?>
+         <pre class="prettyprint" style="margin-top: 1px;">
+      #include  &lt;stdio.h&gt;
+ 
+        // function to find factorial of given number
+        unsigned int factorial(unsigned int n)
+        {
+            int res = 1, i;
+            for (i=2; i<=n; i++)
+                res *= i;
+            return res;
+        }
+         
+        int main()
+        {
+            int num = 5;
+            printf("Factorial of %d is %d", num, factorial(num));
+            return 0;
+        }
+    
+  
+              </pre>
+          </div>
+
+             <div class="in-java">
+          <?prettify linenums=1?>
+          <pre class="prettyprint" style="position: absolute;top:1341px;">
+            // Java program to find factorial of given number
+            class Test
+            {
+                // Method to find factorial of given number
+                static int factorial(int n)
+                {
+                    int res = 1, i;
+                    for (i=2; i<=n; i++)
+                        res *= i;
+                    return res;
+                }
+                 
+                // Driver method
+                public static void main(String[] args) 
+                {
+                    int num = 5;
+                    System.out.println("Factorial of "+ num + " is " + factorial(5));
+                }
+            }
+          </pre>
+  
+        </div>
+        </div>
+        </div>
+        
+        <div class="box pos3">
+            <div class="que alert badge-danger">
+             Q. Bubble Sort.
+            </div>
+            <div class="desc alert badge-warning">
+                Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+            </div>
+            <div class="sol">
+                <span class="alert badge-danger" >solution in </span>
+                <br><br>
+                <button class="btn btn-info c-btn" onclick="switchopt1()">c</button><button style="margin-left:2px;" class="btn btn-info j-btn" onclick="switchopt2()">java</button>
+              
+               
+                <div class="in-c"> 
+              <?prettify linenums=1?>
+         <pre class="prettyprint" style="margin-top: 1px;">
+    // C program for implementation of Bubble sort
+      #include  &lt;stdio.h&gt;
+      
+void swap(int *xp, int *yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+ 
+// A function to implement bubble sort
+void bubbleSort(int arr[], int n)
+{
+   int i, j;
+   for (i = 0; i < n-1; i++)      
+ 
+       // Last i elements are already in place   
+       for (j = 0; j < n-i-1; j++) 
+           if (arr[j] > arr[j+1])
+              swap(&arr[j], &arr[j+1]);
+}
+ 
+/* Function to print an array */
+void printArray(int arr[], int size)
+{
+    int i;
+    for (i=0; i < size; i++)
+        printf("%d ", arr[i]);
+    printf("n");
+}
+ 
+// Driver program to test above functions
+int main()
+{
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    bubbleSort(arr, n);
+    printf("Sorted array: \n");
+    printArray(arr, n);
+    return 0;
+}
+              </pre>
+          </div>
+
+             <div class="in-java">
+          <?prettify linenums=1?>
+          <pre class="prettyprint" style="position: absolute;top:2000px;">
+            // Java program for implementation of Bubble Sort
+            class BubbleSort
+            {
+                void bubbleSort(int arr[])
+                {
+                    int n = arr.length;
+                    for (int i = 0; i < n-1; i++)
+                        for (int j = 0; j < n-i-1; j++)
+                            if (arr[j] > arr[j+1])
+                            {
+                                // swap temp and arr[i]
+                                int temp = arr[j];
+                                arr[j] = arr[j+1];
+                                arr[j+1] = temp;
+                            }
+                }
+             
+                /* Prints the array */
+                void printArray(int arr[])
+                {
+                    int n = arr.length;
+                    for (int i=0; i<n; ++i)
+                        System.out.print(arr[i] + " ");
+                    System.out.println();
+                }
+             
+                // Driver method to test above
+                public static void main(String args[])
+                {
+                    BubbleSort ob = new BubbleSort();
+                    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+                    ob.bubbleSort(arr);
+                    System.out.println("Sorted array");
+                    ob.printArray(arr);
+                }
+            }
+          </pre>
+  
+        </div>
+        </div>
+        </div>
+
+        <div class="box pos4">
+            <div class="que alert badge-danger">
+             Q. Third largest element in an array of distinct elements.
+            </div>
+            <div class="desc alert badge-warning">
+                Given an array of distinct elements, find third largest element in. <br>
+                Example- <br>
+                Input  : arr[] = {1, 14, 2, 16, 10, 20} <br>
+                Output : The third Largest element is 14 
+            </div>
+            <div class="sol">
+                <span class="alert badge-danger" >solution in </span>
+                <br><br>
+                <button class="btn btn-info c-btn" onclick="switchopt1()">c</button><button style="margin-left:2px;" class="btn btn-info j-btn" onclick="switchopt2()">java</button>
+              
+               
+                <div class="in-c"> 
+              <?prettify linenums=1?>
+         <pre class="prettyprint" style="margin-top: 1px;">
+      // C program to find third Largest element in an array
+      // of distinct elements
+      #include &lt;bits/stdc++.h&gt;
+       
+      void thirdLargest(int arr[], int arr_size)
+      {
+          /* There should be atleast three elements */
+          if (arr_size < 3)
+          {
+              printf(" Invalid Input ");
+              return;
+          }
+       
+          // Find first largest element
+          int first = arr[0];
+          for (int i = 1; i < arr_size ; i++)
+              if (arr[i] > first)
+                  first = arr[i];
+       
+          // Find second largest element
+          int second = INT_MIN;
+          for (int i = 0; i < arr_size ; i++)
+              if (arr[i] > second && arr[i] < first)
+                  second = arr[i];
+       
+          // Find third largest element
+          int third = INT_MIN;
+          for (int i = 0; i < arr_size ; i++)
+              if (arr[i] > third && arr[i] < second)
+                  third = arr[i];
+       
+          printf("The third Largest element is %d\n", third);
+      }
+       
+      /* Driver program to test above function */
+      int main()
+      {
+          int arr[] = {12, 13, 1, 10, 34, 16};
+          int n = sizeof(arr)/sizeof(arr[0]);
+          thirdLargest(arr, n);
+          return 0;
+      }
+              </pre>
+          </div>
+
+             <div class="in-java">
+          <?prettify linenums=1?>
+          <pre class="prettyprint" style="position: absolute;top:2707px;">
+    import java.util.*;  
+    public class ThirdLargestInArrayExample1{  
+    public static int getThirdLargest(int[] a, int total){  
+    Arrays.sort(a);  
+    return a[total-3];  
+    }  
+    public static void main(String args[]){  
+    int a[]={1,2,5,6,3,2};  
+    int b[]={44,66,99,77,33,22,55};  
+    System.out.println("Third Largest: "+getThirdLargest(a,6));  
+    System.out.println("Third Largest: "+getThirdLargest(b,7));  
+    }}  
+          </pre>
+  
+        </div>
+        </div>
+        </div> 
+
+    </div>
+    <script>
+        function switchopt1(){
+        
+          var w = document.getElementsByClassName('j-btn');
+          var z = document.getElementsByClassName('c-btn');
+          var x = document.getElementsByClassName('in-c');
+          var y = document.getElementsByClassName('in-java');
+          for(let i=0;i<x.length;i++){
+              
+              x[i].style.opacity="1";
+              y[i].style.opacity="0";
+          }
+          for(let j=0;j<z.length;j++){
+            z[j].style.backgroundColor="black";
+            w[j].style.backgroundColor="green";
+          }
+
+             
+       }
+       function switchopt2(){
+       
+        var w = document.getElementsByClassName('j-btn');
+          var z = document.getElementsByClassName('c-btn');
+        var x = document.getElementsByClassName('in-c');
+          var y = document.getElementsByClassName('in-java');
+          for(let i=0;i<x.length;i++){
+              x[i].style.opacity="0";
+              y[i].style.opacity="1";
+          }
+          for(let j=0;j<z.length;j++){
+            z[j].style.backgroundColor="green";
+            w[j].style.backgroundColor="black";
+          }
+
+}
+    
+       
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" ></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+      
+</body>
+</html>

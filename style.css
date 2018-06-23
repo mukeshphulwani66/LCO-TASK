@@ -1,0 +1,73 @@
+body{
+    background: #a8c0ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+.c-btn{
+    background: black;
+
+}
+.j-btn{
+    background: green;
+    
+}
+.que{
+    width: fit-content;
+}
+.desc{
+    width: fit-content;
+}
+.in-java{
+    position: absolute;
+    opacity: 0;
+    top: 292px;
+    
+}
+
+.prettyprint{
+    max-width: 650px;
+    height: 400px;
+}
+
+@media (min-width:991px){
+    
+
+    .in-java pre{
+        margin-top:-22px; 
+    }
+   
+    .pos3 .sol .in-java .prettyprint,.pos4 .sol .in-java .prettyprint{
+        margin-top: -46px;
+    }
+
+}
+
+@media (max-width:767px){
+    .in-java pre{
+        margin-top:4px;
+    }
+    .que{
+        height: 60px;
+        overflow: auto;
+  }
+  .desc{
+         height: 90px;
+         overflow: auto;
+  }
+ 
+ .pos2 .sol .in-java .prettyprint,  .pos4 .sol .in-java .prettyprint{
+     margin-top:35px;
+ }
+ .pos3 .sol .in-java .prettyprint{
+     margin-top: 56px;
+ }
+ 
+ 
+}
